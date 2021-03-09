@@ -17,7 +17,7 @@ Kazde dzialanie wykonywane jest w ten sam sposob. Wyjatkiem jest oczywiscie dzie
 W tym przypadku musimy zapamietac, ze drugi argument nie moze byc 0.
 
 Kod dzielenia.
-![](.photos/3.png)
+![](./photos/3.png)
 
 Efekt podzielenia przez 0.
-![](.photos/4.png)
+![](./photos/4.png)
