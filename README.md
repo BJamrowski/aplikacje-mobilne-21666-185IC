@@ -10,6 +10,7 @@ Zasoby lancuchowe spinnera.
 Po wybraniu liczb klikamy na przycisk reprezentujacy interesujace nas dzialanie.
 
 Wynik mnozenia 3 i 4.
+
 ![](./photos/2.png)
 
 Kazde dzialanie wykonywane jest w ten sam sposob. Wyjatkiem jest oczywiscie dzielenie.
