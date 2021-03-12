@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Instancje</string>
+    <string name="firstButton">Do aktywnosci nr 1</string>
+    <string name="secondButton">Do aktywnosci nr 2</string>
+    <string name="thirdButton">Do aktywnosci nr 3</string>
+    <string name="deafultText">Wpisz tekst</string>
+    <string name="helloWorld">Hello World!</string>
+</resources>
