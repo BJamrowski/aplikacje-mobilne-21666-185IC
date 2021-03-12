@@ -6,14 +6,17 @@ Aplikacja zawiera 3 aktywnosci. Z kazdej z nich mozna dostac sie do pozostalych.
 wyslania tekstu do aktywnosci 2. W ostatniej aktywnosci znajduje sie komunikat.
 
 Aktywnosc 1
+
 ![](./photos/1.png)
 
 
 Aktywnosc 2
+
 ![](./photos/2.png)
 
 
 Aktywnosc 3
+
 ![](./photos/3.png)
 
 
