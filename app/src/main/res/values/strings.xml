@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Widoki</string>
+    <string name="imie">Imie</string>
+    <string name="nazwisko">Nazwisko</string>
+    <string name="kot">Kot</string>
+    <string name="pies">Pies</string>
+    <string name="owoc">ulubiony owoc?</string>
+    <string name="jablko">Jablko</string>
+    <string name="banan">Banan</string>
+    <string name="pomarancza">Pomarancza</string>
+
+    <string name="pojazd1">Auto</string>
+    <string name="pojazd2">Rower</string>
+    <string name="pojazd3">Autobus</string>
+</resources>
