@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Lab4</string>
+    <string name="logo">Logo of the game MTG</string>
+    <string name="title_activity_planeswalker_category">Planeswalkers</string>
+    <string name="mtg">Magic The Gathering</string>
+    <string name="mtg_title">Magic The Gathering</string>
+</resources>
