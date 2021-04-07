@@ -4,4 +4,5 @@
     <string name="title_activity_planeswalker_category">Planeswalkers</string>
     <string name="mtg">Magic The Gathering</string>
     <string name="mtg_title">Magic The Gathering</string>
+    <string name="info">This is simple application that show you some of planeswalkers, planes and artifacts from the world of a card game Magic The Gathering.</string>
 </resources>

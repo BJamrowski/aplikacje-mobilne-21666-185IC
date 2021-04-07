@@ -26,9 +26,19 @@ import android.widget.ListView;
         AdapterView.OnItemClickListener itemClickListener = new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 0 ){
-                    Intent intent = new Intent(MainActivity.this, PlaneswalkerCategoryActivity.class);
-                    startActivity(intent);
+                switch (position){
+                    case 0:
+                        Intent intent = new Intent(MainActivity.this, PlaneswalkerCategoryActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        Intent intentPlane = new Intent(MainActivity.this, PlanesCategoryActivity.class);
+                        startActivity(intentPlane);
+                        break;
+                    case 2:
+                        Intent intentArtifact = new Intent(MainActivity.this, ArtifactsCategoryActivity.class);
+                        startActivity(intentArtifact);
+                        break;
                 }
             }
         };
