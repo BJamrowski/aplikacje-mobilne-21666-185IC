@@ -7,4 +7,6 @@
     <string name="info">This is simple application that show you some of planeswalkers, planes and artifacts from the world of a card game Magic The Gathering.</string>
     <string name="workout_description">Description</string>
     <string name="workout_title">Title</string>
+    <string name="favorite">Favorite</string>
+    <string name="favorites">Your favorite Planeswalkers</string>
 </resources>

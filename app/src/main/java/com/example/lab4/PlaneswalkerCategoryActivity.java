@@ -3,15 +3,22 @@ package com.example.lab4;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.app.ListActivity;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
+import android.widget.Toast;
 
 public class PlaneswalkerCategoryActivity extends AppCompatActivity {
+
+    private SQLiteDatabase db;
+    private Cursor cursor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,13 +28,20 @@ public class PlaneswalkerCategoryActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        ArrayAdapter<Planeswalker> listAdapter = new ArrayAdapter<>(
-                this,
-                android.R.layout.simple_list_item_1,
-                Planeswalker.planeswalkers
-        );
+
         ListView listPlaneswalkers = findViewById(R.id.list_planeswalkers);
-        listPlaneswalkers.setAdapter(listAdapter);
+        SQLiteOpenHelper mtgwalkerDatabaseHelper = new MtgDatabaseHelper(this);
+        try {
+            db = mtgwalkerDatabaseHelper.getReadableDatabase();
+            cursor = db.query("MTGwalker", new String[]{"_id", "NAME"}, null, null, null, null, null);
+            SimpleCursorAdapter listAdapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1,
+                    cursor, new String[]{"NAME"}, new int[]{android.R.id.text1});
+            listPlaneswalkers.setAdapter(listAdapter);
+        }catch (SQLException e){
+            Toast toast = Toast.makeText(this, "Database inavailable", Toast.LENGTH_SHORT);
+            toast.show();
+        }
+
 
         AdapterView.OnItemClickListener itemClickListener = new AdapterView.OnItemClickListener(){
             public void onItemClick(AdapterView<?> listPlaneswalkers,
@@ -45,5 +59,11 @@ public class PlaneswalkerCategoryActivity extends AppCompatActivity {
         listPlaneswalkers.setOnItemClickListener(itemClickListener);
     }
 
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        cursor.close();
+        db.close();
+    }
 
 }
